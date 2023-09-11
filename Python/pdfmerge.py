@@ -1,3 +1,5 @@
+#Was trying out the PyPD2 library
+
 from PyPDF2 import PdfMerger
 
 # User input
