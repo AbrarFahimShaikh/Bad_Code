@@ -2,8 +2,11 @@ import os
 
 def create_new_file():
     filename = input("Enter new file name: ")
-    with open(filename,'w') as file:
-        print(f"File {filename} created.")
+    if os.path.exists(filename):
+        print(f"File '{filename}' already exists.")
+    else:
+        with open(filename, 'w') as file:
+            print(f"File '{filename}' created.")
 def open_existing_file():
     filename = input("Enter the name of the file to open: ")
     try:
